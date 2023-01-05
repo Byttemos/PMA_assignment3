@@ -5,13 +5,15 @@ import React from "react";
 
 // Import components
 import HomeScreen from "./screens/HomeScreen";
-import FamilyScreen from "./screens/PostsScreen";
+import PostScreen from "./screens/PostsScreen";
 import CommentScreen from "./screens/CommentScreen";
 
 // Navigation specifics, you probably don't need to change these
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const Stack = createNativeStackNavigator();
+
+
 
 export default function App() {
   return (
@@ -24,8 +26,8 @@ export default function App() {
         />
         <Stack.Screen
           name="Posts"
-          component={FamilyScreen}
-          options={{ title: "Posts page" }}
+          component={PostScreen}
+          options={{ title: "Posts page", props: comment_array }}
         />
 
         <Stack.Screen 

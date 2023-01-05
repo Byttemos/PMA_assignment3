@@ -3,22 +3,9 @@ import styles from "../StyleSheet";
 import Comment from "../components/Comment";
 import React, {useState} from "react";
 
-var comment_array = [
 
-    {
-      comment_id: 44,
-      comment_author: "Anonymous",
-      comment_content: "test comment",
-  },
 
-  {
-    comment_id: 45,
-    comment_author: "Anonymous",
-    comment_content: "another test comment",
-}
-]
-
-export default function PostsScreen({ navigation }) {
+export default function PostsScreen({ navigation, comment_array }) {
 
     //initiate array to hold comments. One comment is hardcoded in here for testing purposes
     
