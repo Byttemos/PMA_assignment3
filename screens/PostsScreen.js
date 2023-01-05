@@ -6,11 +6,7 @@ import React, {useState} from "react";
 
 
 export default function PostsScreen({ navigation }) {
-    const [like_count, setCount] = useState(0);
-    const [comment_string, set_comment_string] = useState("");
-    const [get_comments, set_comments] = useState(comment_array);
-    
-    
+
     var comment_array = [
 
         {
@@ -19,6 +15,13 @@ export default function PostsScreen({ navigation }) {
           comment_content: "test comment",
       }
     ]
+
+    const [like_count, setCount] = useState(0);
+    const [comment_string, set_comment_string] = useState("");
+    const [get_comments, set_comments] = useState(comment_array);
+    
+    
+    
 
 
 
