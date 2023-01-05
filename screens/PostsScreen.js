@@ -2,7 +2,8 @@ import { View, Text, Image, Button, TouchableOpacity, TextInput, ScrollView } fr
 import styles from "../StyleSheet";
 import Comment from "../components/Comment";
 import React, {useState} from "react";
-
+import { useContext } from "react";
+import { CommentContext } from "../appContext";
 
 
 export default function PostsScreen({ navigation, comment_array }) {
@@ -12,7 +13,7 @@ export default function PostsScreen({ navigation, comment_array }) {
 
     const [like_count, setCount] = useState(0);
     const [comment_string, set_comment_string] = useState("");
-    const [get_comments, set_comments] = useState(comment_array);
+    const [get_comments, set_comments] = useContext(CommentContext);
     
     
     

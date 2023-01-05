@@ -1,21 +1,10 @@
 import { View, Text, Pressable, Image } from 'react-native'
 import React from 'react'
 import styles from "../StyleSheet";
+import { useContext } from "react";
+import { CommentContext } from "../appContext";
 
-var comment_array = [
 
-    {
-      comment_id: 44,
-      comment_author: "Anonymous",
-      comment_content: "test comment",
-  },
-  
-  {
-    comment_id: 45,
-    comment_author: "Anonymous",
-    comment_content: "another test comment",
-  }
-  ]
 
 export default function HomeScreen({ navigation }) {
     return (
