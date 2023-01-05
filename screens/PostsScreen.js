@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { CommentContext } from "../appContext";
 
 
-export default function PostsScreen({ navigation, comment_array }) {
+export default function PostsScreen({ navigation }) {
 
     //initiate array to hold comments. One comment is hardcoded in here for testing purposes
     
@@ -42,7 +42,16 @@ export default function PostsScreen({ navigation, comment_array }) {
         set_comment_string("");
     }
 
+    function make_comment(comment_data) {
+        return (
+            <Comment>
+                comment_id={comment_data.comment_id}
+                comment_author={comment_data.comment_author}
+                comment_content={comment_data.comment_content}
+            </Comment>
+        );
 
+    }
 
 
     return (
@@ -69,10 +78,14 @@ export default function PostsScreen({ navigation, comment_array }) {
                 </TouchableOpacity>
             </View>
 
-            <ScrollView>
-                
+            <ScrollView style={{height: 200}}
+                data={get_comments}
 
-            </ScrollView>
+                renderItem={({ item }) => make_comment(item)}
+
+                keyExtractor={item => item.comment_id}
+                />
+            
 
             <View style={styles.inputField}>
                     <TextInput
@@ -91,7 +104,7 @@ export default function PostsScreen({ navigation, comment_array }) {
             />
             <Button
                 title= "test"
-                onPress={() => console.log(comment_array)}
+                onPress={() => console.log(get_comments)}
             />
             
             

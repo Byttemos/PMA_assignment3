@@ -20,7 +20,7 @@ export default function HomeScreen({ navigation }) {
             </View>
 
             <View style={styles.louserLogo}>
-                <Pressable onPress={() => navigation.navigate("Posts", comment_array)}>
+                <Pressable onPress={() => navigation.navigate("Posts")}>
                     <Image
                         style={styles.userLogo}
                         source={require('../assets/userlogo.png')}

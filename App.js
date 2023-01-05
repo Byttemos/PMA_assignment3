@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-import React from "react";
+import React, {useState} from "react";
 
 // Import components
 import HomeScreen from "./screens/HomeScreen";
@@ -33,7 +33,7 @@ export default function App() {
   }
   ]
 
-  const [getComments, setComments] = useState((comments));
+  const [getComments, setComments] = useState((comment_array));
 
   return (
     <CommentContext.Provider value={[getComments, setComments]}>
