@@ -1,4 +1,4 @@
-import { View, Text, Image, Button, TouchableOpacity, TextInput } from 'react-native'
+import { View, Text, Image, Button, TouchableOpacity, TextInput, ScrollView } from 'react-native'
 import styles from "../StyleSheet";
 import Comment from "../components/Comment";
 import React, {useState} from "react";
@@ -80,6 +80,11 @@ export default function PostsScreen({ navigation }) {
                     
                 </TouchableOpacity>
             </View>
+
+            <ScrollView>
+                
+
+            </ScrollView>
 
             <View style={styles.inputField}>
                     <TextInput
