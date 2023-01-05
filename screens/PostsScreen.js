@@ -3,18 +3,25 @@ import styles from "../StyleSheet";
 import Comment from "../components/Comment";
 import React, {useState} from "react";
 
+var comment_array = [
 
+    {
+      comment_id: 44,
+      comment_author: "Anonymous",
+      comment_content: "test comment",
+  },
+
+  {
+    comment_id: 45,
+    comment_author: "Anonymous",
+    comment_content: "another test comment",
+}
+]
 
 export default function PostsScreen({ navigation }) {
 
-    var comment_array = [
-
-        {
-          comment_id: 44,
-          comment_author: "Anonymous",
-          comment_content: "test comment",
-      }
-    ]
+    //initiate array to hold comments. One comment is hardcoded in here for testing purposes
+    
 
     const [like_count, setCount] = useState(0);
     const [comment_string, set_comment_string] = useState("");
