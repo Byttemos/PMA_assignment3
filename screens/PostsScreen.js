@@ -1,4 +1,4 @@
-import { View, Text, Image, Button, TouchableOpacity, TextInput, ScrollView } from 'react-native'
+import { View, Text, Image, Button, TouchableOpacity, TextInput, ScrollView, FlatList } from 'react-native'
 import styles from "../StyleSheet";
 import Comment from "../components/Comment";
 import React, {useState} from "react";
@@ -58,7 +58,7 @@ export default function PostsScreen({ navigation }) {
         <View style={styles.base}>
             
             <View>
-                <Text style={{ marginLeft: 42, marginTop: 40, fontSize: 24 }}>
+                <Text style={{ marginLeft: 42, marginTop: 20, fontSize: 24, marginLeft: 115}}>
                     Henrik Riskær
                 </Text>
                 <Image
@@ -78,13 +78,15 @@ export default function PostsScreen({ navigation }) {
                 </TouchableOpacity>
             </View>
 
-            <ScrollView style={{height: 200}}
+            <FlatList
+                style={{height: 200}}
+
                 data={get_comments}
 
                 renderItem={({ item }) => make_comment(item)}
 
                 keyExtractor={item => item.comment_id}
-                />
+            />
             
 
             <View style={styles.inputField}>
